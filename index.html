@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html>
   <head>
     <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
@@ -8,12 +8,12 @@
   </head>
   <body style="margin: 0; overflow: hidden;">
     <a-scene embedded arjs>
-      <!-- Imagen disparadora -->
+      Imagen disparadora
       <a-marker id="marker type="pattern" url="assets/pruebaMarcador.patt" >
-         <!-- Video asociado  -->
-         <!-- <a-video src="assets/bebeRiendoVideo.mp4"  position="0 0.75 0"  scale="3 1.5 1"  autoplay  muted   playsinline></a-video> -->
+         Video asociado 
+         <a-video src="assets/bebeRiendoVideo.mp4"  position="0 0.75 0"  scale="3 1.5 1"  autoplay  muted   playsinline></a-video>
 
-         <!-- <a-video src="assets/video4_3.mp4"  position="0 0.5 0"  scale="3 1.5 1" rotation="0 0 0" autoplay  muted   playsinline></a-video> -->
+         <a-video src="assets/video4_3.mp4"  position="0 0.5 0"  scale="3 1.5 1" rotation="0 0 0" autoplay  muted   playsinline></a-video>
 
          <a-video 
           id="videoElement"
@@ -27,7 +27,7 @@
       </a-marker>
       <a-entity camera></a-entity>
     </a-scene>
-    <!-- <script>
+    <script>
         // Obtener el marcador y el video
         const marker = document.querySelector("#marker");
         const video = document.querySelector("#videoElement");
@@ -44,7 +44,7 @@
           video.pause();
           video.currentTime = 0;  // Opcional: Reiniciar el video a la primera escena
         });
-      </script> -->
+      </script>
       <script>
         // Obtener el marcador y el video
         const marker = document.querySelector("#marker");
@@ -68,4 +68,28 @@
         });
       </script>
   </body>
+</html> -->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+   
+    <script src="https://cdn.jsdelivr.net/gh/jeromeetienne/ar.js/aframe/build/aframe-ar.min.js"></script>
+
+  </head>
+  <body style="margin: 0; overflow: hidden;">
+    <a-scene embedded arjs>
+      <!-- Imagen disparadora -->
+      <a-marker preset="custom" type="pattern" url="assets/pruebaMarcador.patt">
+        <!-- Video asociado -->
+         <!-- <a-video src="assets/bebeRiendoVideo.mp4"  position="0 0.75 0"  scale="3 1.5 1"  autoplay  muted   playsinline></a-video>-->
+
+         <a-video src="assets/video4_3.mp4"  position="0 0.5 0"  scale="3 1.5 1" rotation="0 0 0"   muted   playsinline></a-video>
+
+      </a-marker>
+      <a-entity camera></a-entity>
+    </a-scene>
+  </body>
 </html>
+
