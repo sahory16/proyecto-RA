@@ -27,10 +27,32 @@
       </a-marker>
       <a-entity camera></a-entity>
     </a-scene>
-    <script>
+    <!-- <script>
         // Obtener el marcador y el video
         const marker = document.querySelector("#marker");
         const video = document.querySelector("#videoElement");
+  
+        // Cuando el marcador es detectado
+        marker.addEventListener('markerFound', function() {
+          // Reproducir el video cuando el marcador es encontrado
+          video.play();
+        });
+  
+        // Cuando el marcador es perdido
+        marker.addEventListener('markerLost', function() {
+          // Pausar el video cuando el marcador se pierde
+          video.pause();
+          video.currentTime = 0;  // Opcional: Reiniciar el video a la primera escena
+        });
+      </script> -->
+      <script>
+        // Obtener el marcador y el video
+        const marker = document.querySelector("#marker");
+        const video = document.querySelector("#videoElement");
+  
+        // Inicializar el video en pausa
+        video.pause();
+        video.currentTime = 0; // Asegurarse de que el video comience desde el inicio
   
         // Cuando el marcador es detectado
         marker.addEventListener('markerFound', function() {
